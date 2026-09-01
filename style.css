@@ -1,0 +1,1051 @@
+/* ==================================================
+   CORES
+================================================== */
+
+:root {
+  --rosa-porta: #f4d1d8;
+  --rosa: #d995a4;
+  --rosa-escuro: #b96f80;
+
+  --marrom: #4a2e2a;
+  --marrom-escuro: #2d1a18;
+
+  --creme: #fff7f1;
+  --bege: #ead5ca;
+}
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+
+  background: var(--marrom-escuro);
+
+  color: var(--creme);
+
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ==================================================
+   CONVITE
+================================================== */
+
+.convite {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: radial-gradient(
+    circle at 50% 38%,
+    #704b47 0%,
+    #4a2e2a 42%,
+    #2d1a18 100%
+  );
+}
+
+/* ==================================================
+   TEXTURA
+================================================== */
+
+.textura {
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.08;
+
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 4px,
+    rgba(255, 255, 255, 0.15) 5px
+  );
+}
+
+/* ==================================================
+   DECORAÇÕES
+================================================== */
+
+.decoracao {
+  position: absolute;
+
+  color: var(--rosa);
+
+  opacity: 0.3;
+
+  font-family: serif;
+}
+
+.decoracao-1 {
+  top: 25px;
+  right: 28px;
+  font-size: 30px;
+}
+
+.decoracao-2 {
+  bottom: 25px;
+  left: 25px;
+  font-size: 40px;
+}
+
+.decoracao-3 {
+  bottom: 80px;
+  right: 25px;
+  font-size: 17px;
+}
+
+/* ==================================================
+   CONTEÚDO
+================================================== */
+
+.conteudo {
+  position: relative;
+
+  z-index: 5;
+
+  width: min(90%, 430px);
+
+  text-align: center;
+
+  animation: aparecer 1.2s ease forwards;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================================================
+   CABEÇALHO
+================================================== */
+
+.save-date {
+  color: var(--rosa);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 5px;
+}
+
+h1 {
+  font-family: "DM Serif Display", serif;
+
+  font-weight: 400;
+
+  font-size: clamp(45px, 13vw, 62px);
+
+  line-height: 0.85;
+
+  text-transform: uppercase;
+
+  color: var(--creme);
+
+  text-shadow: 2px 3px 0 var(--marrom-escuro);
+}
+
+.idade {
+  font-family: "Rye", serif;
+
+  color: var(--rosa);
+
+  font-size: clamp(75px, 22vw, 100px);
+
+  line-height: 0.9;
+
+  margin-top: 7px;
+
+  text-shadow: 3px 3px 0 var(--marrom-escuro);
+}
+
+.anos {
+  color: var(--rosa);
+
+  font-size: 10px;
+
+  letter-spacing: 8px;
+
+  margin-left: 8px;
+
+  margin-top: 2px;
+}
+
+/* ==================================================
+   ORNAMENTO
+================================================== */
+
+.ornamento {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin: 8px 0 11px;
+}
+
+.ornamento span {
+  color: var(--rosa);
+
+  font-size: 13px;
+}
+
+.ornamento i {
+  width: 40px;
+
+  height: 1px;
+
+  background: var(--rosa);
+
+  opacity: 0.6;
+}
+
+/* ==================================================
+   DATA
+================================================== */
+
+.data {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-bottom: 7px;
+}
+
+.rotulo {
+  color: var(--rosa);
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  font-weight: 700;
+
+  margin-bottom: 2px;
+}
+
+.data strong {
+  color: var(--creme);
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: clamp(25px, 7vw, 31px);
+
+  line-height: 1.1;
+}
+
+.data .dia {
+  color: var(--bege);
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+
+  margin-top: 3px;
+}
+
+/* ==================================================
+   HORÁRIO
+================================================== */
+
+.horario {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin: 5px 0 12px;
+}
+
+.horario .rotulo {
+  margin: 0;
+}
+
+.horario strong {
+  color: var(--rosa);
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: 31px;
+
+  line-height: 1;
+}
+
+/* ==================================================
+   LOCAL
+================================================== */
+
+.local {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  padding: 11px 15px;
+
+  margin-bottom: 11px;
+
+  border-top: 1px solid rgba(229, 177, 184, 0.3);
+
+  border-bottom: 1px solid rgba(229, 177, 184, 0.3);
+}
+
+.local strong {
+  color: var(--creme);
+
+  font-size: 16px;
+
+  line-height: 1.3;
+
+  margin-top: 2px;
+
+  font-weight: 600;
+}
+
+.local > span:not(.rotulo):not(.cep) {
+  color: var(--bege);
+
+  font-size: 12px;
+
+  margin-top: 3px;
+}
+
+.local .cep {
+  color: var(--rosa);
+
+  font-size: 12px;
+
+  margin-top: 2px;
+
+  letter-spacing: 1px;
+}
+
+/* ==================================================
+   FRASE
+================================================== */
+
+.frase {
+  font-family: "DM Serif Display", serif;
+
+  font-style: italic;
+
+  color: var(--bege);
+
+  font-size: 16px;
+
+  line-height: 1.35;
+
+  margin-bottom: 10px;
+}
+
+/* ==================================================
+   BOTÕES
+================================================== */
+
+.botoes {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.botao {
+  width: 100%;
+
+  min-height: 47px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.botao:hover {
+  transform: translateY(-2px);
+
+  filter: brightness(1.1);
+}
+
+.confirmar {
+  border: none;
+
+  color: var(--marrom-escuro);
+
+  background: linear-gradient(135deg, #f4d1d8, #d995a4);
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
+}
+
+.mapa {
+  color: var(--creme);
+
+  border: 1px solid rgba(244, 209, 216, 0.35);
+
+  background: rgba(112, 75, 71, 0.35);
+}
+
+.rodape {
+  color: var(--rosa);
+
+  font-family: "DM Serif Display", serif;
+
+  font-size: 16px;
+
+  font-style: italic;
+
+  margin-top: 7px;
+}
+
+/* ==================================================
+   ENTRADA
+================================================== */
+
+.entrada {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 100;
+
+  overflow: hidden;
+
+  perspective: 1400px;
+
+  background: var(--marrom-escuro);
+
+  animation: desaparecer 0.7s ease forwards;
+
+  animation-delay: 3.4s;
+
+  pointer-events: none;
+}
+
+@keyframes desaparecer {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* ==================================================
+   LUZ
+================================================== */
+
+.luz {
+  position: absolute;
+
+  width: 70%;
+
+  height: 80%;
+
+  left: 15%;
+
+  top: 10%;
+
+  background: radial-gradient(
+    ellipse,
+    rgba(244, 209, 216, 0.9),
+    rgba(217, 149, 164, 0.3) 40%,
+    transparent 70%
+  );
+
+  filter: blur(25px);
+}
+
+/* ==================================================
+   ARCO
+================================================== */
+
+.arco {
+  position: absolute;
+
+  z-index: 3;
+
+  left: 50%;
+
+  bottom: 0;
+
+  transform: translateX(-50%);
+
+  width: 58%;
+
+  height: 78%;
+
+  border: 8px solid var(--marrom);
+
+  border-bottom: none;
+
+  border-radius: 300px 300px 0 0;
+}
+
+.placa {
+  position: absolute;
+
+  top: 10%;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 170px;
+
+  padding: 12px 8px;
+
+  text-align: center;
+
+  background: var(--rosa-porta);
+
+  border: 3px solid var(--marrom);
+
+  color: var(--marrom);
+}
+
+.placa span {
+  display: block;
+
+  font-size: 7px;
+
+  letter-spacing: 3px;
+}
+
+.placa strong {
+  display: block;
+
+  font-family: "Rye", serif;
+
+  font-size: 21px;
+
+  margin-top: 2px;
+}
+
+/* ==================================================
+   ABERTURA FAROESTE / SALOON
+================================================== */
+
+.entrada {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 100;
+
+  overflow: hidden;
+
+  perspective: 1300px;
+
+  background: #241310;
+
+  pointer-events: none;
+
+  /*
+       Tempo total:
+
+       0s - portas fechadas
+       1.2s - portas começam a abrir
+       2.9s - portas totalmente abertas
+       3.0s - placa aparece
+       4.5s - placa desaparece
+       5.2s - abertura desaparece
+    */
+
+  animation: fechar-entrada 0.8s ease forwards;
+
+  animation-delay: 5.1s;
+}
+
+/* ==================================================
+   LUZ ATRÁS DAS PORTAS
+================================================== */
+
+.luz-saloon {
+  position: absolute;
+
+  width: 70vw;
+  height: 100vh;
+
+  left: 15vw;
+  top: 0;
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(244, 209, 216, 0.9) 0%,
+    rgba(217, 149, 164, 0.45) 28%,
+    rgba(74, 46, 42, 0.2) 55%,
+    transparent 72%
+  );
+
+  filter: blur(18px);
+
+  opacity: 0.8;
+}
+
+/* ==================================================
+   PORTAS
+================================================== */
+
+.porta {
+  position: absolute;
+
+  top: 0;
+
+  width: 50%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    #2b1713 0%,
+    #4a2e2a 25%,
+    #5a3832 50%,
+    #422722 75%,
+    #281411 100%
+  );
+
+  border: 9px solid #1e0d0b;
+
+  box-shadow:
+    inset 0 0 45px rgba(0, 0, 0, 0.65),
+    0 0 20px rgba(0, 0, 0, 0.5);
+
+  z-index: 10;
+}
+
+/* ==================================================
+   ABERTURA AUTOMÁTICA
+================================================== */
+
+.porta-esquerda {
+  left: 0;
+
+  transform-origin: left center;
+
+  animation: abrir-esquerda 1.6s cubic-bezier(0.77, 0, 0.18, 1) 0.6s forwards;
+}
+
+.porta-direita {
+  right: 0;
+
+  transform-origin: right center;
+
+  animation: abrir-direita 1.6s cubic-bezier(0.77, 0, 0.18, 1) 0.6s forwards;
+}
+
+@keyframes abrir-esquerda {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(-105deg);
+  }
+}
+
+@keyframes abrir-direita {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(105deg);
+  }
+}
+
+/* ==================================================
+   TÁBUAS DA MADEIRA
+================================================== */
+
+.tabuas {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  justify-content: space-evenly;
+
+  opacity: 0.55;
+}
+
+.tabuas span {
+  width: 3px;
+
+  height: 100%;
+
+  background: #24120f;
+
+  box-shadow: 1px 0 rgba(142, 88, 74, 0.4);
+}
+
+/* ==================================================
+   MOLDURA WESTERN
+================================================== */
+
+.moldura-porta {
+  position: absolute;
+
+  inset: 7% 9%;
+
+  border: 3px solid #8a5548;
+
+  border-radius: 130px 130px 12px 12px;
+
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.45);
+}
+
+/* ==================================================
+   DETALHES ROSA
+================================================== */
+
+.detalhe-rosa {
+  position: absolute;
+
+  left: 13%;
+
+  right: 13%;
+
+  height: 4px;
+
+  background: #d995a4;
+
+  box-shadow: 0 0 7px rgba(217, 149, 164, 0.25);
+}
+
+.detalhe-rosa-1 {
+  top: 31%;
+}
+
+.detalhe-rosa-2 {
+  top: 69%;
+}
+
+/* pequenos detalhes laterais */
+
+.detalhe-rosa::before,
+.detalhe-rosa::after {
+  content: "✦";
+
+  position: absolute;
+
+  top: -10px;
+
+  color: #d995a4;
+
+  font-size: 14px;
+}
+
+.detalhe-rosa::before {
+  left: -2px;
+}
+
+.detalhe-rosa::after {
+  right: -2px;
+}
+
+/* ==================================================
+   FERRAGENS
+================================================== */
+
+.ferragem {
+  position: absolute;
+
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+
+  border: 3px solid #d995a4;
+
+  background: #2b1713;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.ferragem-1 {
+  top: 20%;
+}
+
+.ferragem-2 {
+  bottom: 20%;
+}
+
+.porta-esquerda .ferragem {
+  right: 18px;
+}
+
+.porta-direita .ferragem {
+  left: 18px;
+}
+
+/* ==================================================
+   PUXADOR
+================================================== */
+
+.puxador {
+  position: absolute;
+
+  top: 47%;
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 2px solid #d995a4;
+
+  color: #d995a4;
+
+  background: #2b1713;
+
+  font-size: 15px;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.porta-esquerda .puxador {
+  right: 13px;
+}
+
+.porta-direita .puxador {
+  left: 13px;
+}
+
+/* ==================================================
+   PLAQUINHA CENTRAL
+================================================== */
+
+.placa-saloon {
+  position: absolute;
+
+  z-index: 20;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%) scale(0.7);
+
+  width: min(80%, 320px);
+
+  padding: 25px 20px;
+
+  text-align: center;
+
+  background: #f4d1d8;
+
+  border: 5px solid #4a2e2a;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+
+  opacity: 0;
+
+  animation:
+    aparecer-placa 0.5s ease 2.3s forwards,
+    desaparecer-placa 0.5s ease 3.5s forwards;
+}
+
+/* borda interna */
+
+.placa-saloon::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  border: 1px solid #9b5967;
+
+  pointer-events: none;
+}
+
+.estrela-placa {
+  color: #4a2e2a;
+
+  font-size: 19px;
+
+  margin-bottom: 5px;
+}
+
+.placa-saloon span {
+  display: block;
+
+  color: #4a2e2a;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.placa-saloon strong {
+  display: block;
+
+  color: #4a2e2a;
+
+  font-family: "Rye", serif;
+
+  font-size: clamp(25px, 7vw, 34px);
+
+  margin-top: 3px;
+}
+
+.linha-placa {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 9px;
+}
+
+.linha-placa i {
+  width: 35px;
+
+  height: 1px;
+
+  background: #9b5967;
+}
+
+.linha-placa b {
+  color: #9b5967;
+
+  font-size: 12px;
+}
+
+/* ==================================================
+   ANIMAÇÕES DA PLAQUINHA
+================================================== */
+
+@keyframes aparecer-placa {
+  0% {
+    opacity: 0;
+
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes desaparecer-placa {
+  to {
+    opacity: 0;
+
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+/* ==================================================
+   SUMIR TELA DE ABERTURA
+================================================== */
+
+@keyframes fechar-entrada {
+  to {
+    opacity: 0;
+
+    visibility: hidden;
+  }
+}
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 500px) {
+  .moldura-porta {
+    inset: 6% 7%;
+  }
+
+  .detalhe-rosa {
+    left: 10%;
+    right: 10%;
+  }
+
+  .placa-saloon {
+    width: 78%;
+    padding: 22px 15px;
+  }
+}
+
+/* ==================================================
+   TELAS PEQUENAS
+================================================== */
+
+@media (max-height: 650px) {
+  .placa-saloon {
+    padding: 18px;
+  }
+
+  .placa-saloon strong {
+    font-size: 27px;
+  }
+}
